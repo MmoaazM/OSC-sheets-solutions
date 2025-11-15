@@ -2,10 +2,10 @@ class Solution {
 public:
     string decodeString(string s) {
         int i = 0;
-        return helper(s, i);
+        return DecodeSubStrings(s, i);
     }
 
-    string helper(string& s, int& i) {
+    string DecodeSubStrings(string& s, int& i) {
         string result = "";
 
         while (i < s.size() && s[i] != ']') {
@@ -27,7 +27,7 @@ public:
                 i++;
 
                
-                string decoded = helper(s, i);
+                string decoded = DecodeSubStrings(s, i);
 
                 
                 i++;
